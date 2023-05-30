@@ -1,0 +1,9 @@
+[Unit]
+Description = Glances in Web Server Mode
+After = network.target
+
+[Service]
+ExecStart = /home/linuxbrew/.linuxbrew/bin/glances -w -t 5
+
+[Install]
+WantedBy = multi-user.target
