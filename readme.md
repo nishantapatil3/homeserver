@@ -1,9 +1,12 @@
+## Pre-install steps
 
-#### sudo
+### linux
+```
 sudo apt update
 sudo apt upgrade -y
+```
 
-#### brew
+### brew
 https://brew.sh
 
 ```
