@@ -5,8 +5,9 @@ set -a
 source .env
 set +a
 
-echo "Backing up ${DB_DATABASE_NAME} to ${UPLOAD_LOCATION}/db_dumps"
+echo "Backing up ${DB_DATABASE_NAME} to ${UPLOAD_LOCATION}/db_dumps/dump.sql.gz"
 
 mkdir -p ${UPLOAD_LOCATION}/db_dumps
 
 docker exec -t immich_postgres pg_dumpall -c -U postgres | gzip > "${UPLOAD_LOCATION}/db_dumps/dump.sql.gz"
+ls -al ${UPLOAD_LOCATION}/db_dumps/dump.sql.gz
