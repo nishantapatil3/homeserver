@@ -86,7 +86,7 @@ services:
       - IMMICH_SERVER_URL
       - IMMICH_WEB_URL
     ports:
-      - 2283:8080
+      - 80:8080
     logging:
       driver: none
     depends_on:
