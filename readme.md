@@ -18,6 +18,9 @@ brew install docker-compose
 brew install btop
 ```
 
+# for *.local address
+sudo apt install avahi-daemon
+
 ### Immich update
 ```
 docker-compose pull && docker-compose up -d
