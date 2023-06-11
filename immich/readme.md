@@ -40,3 +40,8 @@ docker-compose pull && docker-compose up -d
 ```
 ./copy-to-hdd.sh
 ```
+
+### tail logs
+```
+docker-compose logs -f -n 10
+```
