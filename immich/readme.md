@@ -45,3 +45,15 @@ docker-compose pull && docker-compose up -d
 ```
 docker-compose logs -f -n 10
 ```
+
+### reset volume and network
+```
+docker volume prune
+docker network prune
+```
+
+### cli upload
+```
+alias immich='docker run -it --rm -v "$(pwd):/import" ghcr.io/immich-app/immich-cli:latest'
+immich upload --key kEPGBFh4pcXRzQkcYEYVz83Aic9nPUArcRSE9D56bA --server http://192.168.4.95/api --recursive
+```

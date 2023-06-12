@@ -12,7 +12,7 @@ services:
     depends_on:
       - redis
       - database
-      - typesense
+    #   - typesense
     restart: always
 
   immich-microservices:
@@ -26,18 +26,18 @@ services:
     depends_on:
       - redis
       - database
-      - typesense
+    #   - typesense
     restart: always
 
-  immich-machine-learning:
-    container_name: immich_machine_learning
-    image: ghcr.io/immich-app/immich-machine-learning:release
-    volumes:
-      - ${UPLOAD_LOCATION}:/usr/src/app/upload
-      - model-cache:/cache
-    env_file:
-      - .env
-    restart: always
+#   immich-machine-learning:
+#     container_name: immich_machine_learning
+#     image: ghcr.io/immich-app/immich-machine-learning:release
+#     volumes:
+#     - ${UPLOAD_LOCATION}:/usr/src/app/upload
+#     - model-cache:/cache
+#     env_file:
+#     - .env
+#     restart: always
 
   immich-web:
     container_name: immich_web
@@ -47,17 +47,17 @@ services:
       - .env
     restart: always
 
-  typesense:
-    container_name: immich_typesense
-    image: typesense/typesense:0.24.0
-    environment:
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-      - TYPESENSE_DATA_DIR=/data
-    logging:
-      driver: none
-    volumes:
-      - tsdata:/data
-    restart: always
+#   typesense:
+#     container_name: immich_typesense
+#     image: typesense/typesense:0.24.0
+#     environment:
+#      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+#      - TYPESENSE_DATA_DIR=/data
+#     logging:
+#      driver: none
+#     volumes:
+#      - tsdata:/data
+#     restart: always
 
   redis:
     container_name: immich_redis
@@ -93,12 +93,12 @@ services:
       - immich-server
     restart: always
 
-#  backup:
-#    container_name: immich_db_dumper
-#    image: prodrigestivill/postgres-backup-local
-#    env_file:
+#   backup:
+#     container_name: immich_db_dumper
+#     image: prodrigestivill/postgres-backup-local
+#     env_file:
 #      - .env
-#    environment:
+#     environment:
 #      POSTGRES_HOST: database
 #      POSTGRES_DB: ${DB_DATABASE_NAME}
 #      POSTGRES_USER: ${DB_USERNAME}
@@ -106,9 +106,9 @@ services:
 #      SCHEDULE: "@daily"
 #      BACKUP_NUM_KEEP: 7
 #      BACKUP_DIR: /db_dumps
-#    volumes:
+#     volumes:
 #      - ./db_dumps:/db_dumps
-#    depends_on:
+#     depends_on:
 #      - database
 
 volumes:
