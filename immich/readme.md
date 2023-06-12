@@ -1,5 +1,10 @@
 ## Pre-install steps
 
+```
+sudo apt install openssh-server
+sudo systemctl start ssh
+```
+
 ### Update/Upgrade
 ```
 sudo apt update
