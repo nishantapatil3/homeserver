@@ -7,8 +7,8 @@ sudo apt upgrade -y
 ```
 
 ```
-sudo apt  install curl
-sudo apt  install git
+sudo apt install curl
+sudo apt install git
 ```
 
 ### brew
