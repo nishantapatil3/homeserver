@@ -11,6 +11,12 @@ sudo apt install curl
 sudo apt install git
 ```
 
+docker install script
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
 ### brew
 https://brew.sh
 ```
