@@ -2,7 +2,7 @@
 
 # automatically export all variables
 set -a
-source .env
+source ~/homeserver/immich/.env
 set +a
 
 echo "Backing up ${DB_DATABASE_NAME} to ${UPLOAD_LOCATION}/db_dumps/dump.sql.gz"
