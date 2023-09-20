@@ -111,6 +111,19 @@ services:
 #     depends_on:
 #      - database
 
+  ngrok:
+    image: ngrok/ngrok:latest
+    restart: always
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - /home/ubuntu/homeserver/immich/ngrok.yml:/etc/ngrok.yml
+    ports:
+      - 4040:4040
+
 volumes:
   pgdata:
   model-cache:
