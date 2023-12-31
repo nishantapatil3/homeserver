@@ -1,8 +1,0 @@
-authtoken: ...
-region: us
-version: 2
-tunnels:
-  my-public-web:
-    addr: homeserver.local:8080
-    proto: http
-    domain: grackle-valued-optionally.ngrok-free.app
