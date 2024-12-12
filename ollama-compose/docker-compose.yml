@@ -1,0 +1,19 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: ollama-webui
+    volumes:
+      - ollama-webui:/app/backend/data
+    network_mode: host
+    environment:
+      - ENV=dev
+      - WEBUI_AUTH=False
+      - WEBUI_URL=http://localhost:8080
+      - WEBUI_SECRET_KEY=t0p-s3cr3t
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
+
+volumes:
+  ollama-webui: {}
+
