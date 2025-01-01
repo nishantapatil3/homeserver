@@ -10,11 +10,11 @@ services:
         max-size: "10mb"
         max-file: "1"
     ports:
-      - 8581:8581
-      - 51081:51081/tcp
+      - 8080:8080
+      - 51803:51803/tcp
     environment:
       - TZ=America/Pacific
-      - ENABLE_AVAHI=1
+      - ENABLE_AVAHI=0
       - PGID=1099
       - PUID=1099
       - HOMEBRIDGE_CONFIG_UI=1
