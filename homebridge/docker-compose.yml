@@ -2,7 +2,6 @@ services:
   homebridge:
     image: homebridge/homebridge:latest
     restart: always
-    network_mode: host
     volumes:
       - ./homebridge:/homebridge
     logging:
@@ -12,3 +11,12 @@ services:
         max-file: "1"
     ports:
       - 8581:8581
+      - 51081:51081/tcp
+    environment:
+      - TZ=America/Pacific
+      - ENABLE_AVAHI=1
+      - PGID=1099
+      - PUID=1099
+      - HOMEBRIDGE_CONFIG_UI=1
+      - HOMEBRIDGE_CONFIG_UI_PORT=8080
+    network_mode: host
