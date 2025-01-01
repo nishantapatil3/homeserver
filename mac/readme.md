@@ -15,4 +15,6 @@ brew install gh
 - https://code.visualstudio.com/
 - https://ollama.com/
 - https://freefilesync.org/
+- https://www.macpsd.net/
+- https://etcher.balena.io/
 - https://github.com/exelban/stats (Consumes power)
