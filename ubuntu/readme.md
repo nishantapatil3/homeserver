@@ -1,14 +1,8 @@
 ## Pre-install steps
 
 ```
-sudo apt install openssh-server
+sudo apt install openssh-server -y
 sudo systemctl start ssh
-```
-
-## Cockpit
-```
-. /etc/os-release
-sudo apt install -t ${VERSION_CODENAME}-backports cockpit
 ```
 
 ### Update/Upgrade
@@ -18,8 +12,9 @@ sudo apt upgrade -y
 ```
 
 ```
-sudo apt install curl
-sudo apt install git
+sudo apt install curl -y
+sudo apt install git -y
+sudo apt install vim -y
 ```
 
 docker install script
@@ -31,8 +26,7 @@ sudo sh get-docker.sh
 ### brew
 https://brew.sh
 ```
-brew update
-brew upgrade
+brew update; brew upgrade; brew cleanup
 ```
 
 ```
