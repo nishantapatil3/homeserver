@@ -3,7 +3,7 @@ services:
     image: ghcr.io/open-webui/open-webui:main
     container_name: ollama-webui
     volumes:
-      - ollama-webui:/app/backend/data
+      - ./ollama-webui:/app/backend/data
     network_mode: host
     environment:
       - ENV=dev
@@ -13,7 +13,4 @@ services:
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
-
-volumes:
-  ollama-webui: {}
 
