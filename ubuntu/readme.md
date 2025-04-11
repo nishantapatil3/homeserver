@@ -38,3 +38,12 @@ brew install btop
 
 # for *.local address
 sudo apt install avahi-daemon
+
+# terminal
+```
+https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+https://ohmyz.sh/
+
+sudo apt install fzf
+Update .zshrc with plugins=(fzf)
+```
