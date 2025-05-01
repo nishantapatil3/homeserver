@@ -1,0 +1,61 @@
+views:
+  - path: default_view
+    title: Home
+    cards:
+      - type: grid
+        square: false
+        columns: 1
+        title: 1st Floor
+        cards:
+          - type: thermostat
+            entity: climate.guest_room_thermostat
+            features:
+              - type: climate-hvac-modes
+                hvac_modes:
+                  - auto
+                  - cool
+                  - heat
+                  - 'off'
+          - show_state: true
+            show_name: true
+            camera_view: auto
+            type: picture-entity
+            entity: camera.front_door_camera_snapshot
+            camera_image: camera.frontdoor_live
+          - show_state: true
+            show_name: true
+            camera_view: auto
+            type: picture-entity
+            entity: camera.garage_camera_snapshot
+      - type: grid
+        square: false
+        columns: 1
+        title: 2nd Floor
+        cards:
+          - type: thermostat
+            entity: climate.living_room_thermostat
+            features:
+              - type: climate-hvac-modes
+                hvac_modes:
+                  - auto
+                  - cool
+                  - heat
+                  - 'off'
+      - type: grid
+        square: false
+        columns: 1
+        title: 3rd Floor
+        cards:
+          - type: thermostat
+            entity: climate.master_bedroom_thermostat
+            features:
+              - type: climate-hvac-modes
+                hvac_modes:
+                  - auto
+                  - cool
+                  - heat
+                  - 'off'
+            show_current_as_primary: false
+          - type: history-graph
+            entities:
+              - entity: sensor.system_monitor_processor_temperature

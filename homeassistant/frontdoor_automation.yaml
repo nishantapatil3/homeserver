@@ -1,0 +1,31 @@
+alias: Front Door automation
+description: ""
+triggers:
+  - type: motion
+    device_id: d9bf8d19701e3e8132a6fad57969346c
+    entity_id: e5d5fc091c8ac0aa7dae6262ab68280a
+    domain: binary_sensor
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+conditions: []
+actions:
+  - action: camera.snapshot
+    metadata: {}
+    data:
+      filename: /media/frontdoor_notification.jpeg
+    target:
+      device_id: d9bf8d19701e3e8132a6fad57969346c
+  - action: camera.record
+    metadata: {}
+    data:
+      duration: 60
+      lookback: 0
+      filename: >-
+        /media/frontdoor/frontdoor_{{
+        now().astimezone().strftime('%Y-%m-%d-%H:%M:%S') }}.mp4
+    target:
+      entity_id: camera.front_door_live
+mode: single
