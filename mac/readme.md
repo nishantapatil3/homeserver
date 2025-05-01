@@ -3,7 +3,7 @@
 - https://www.warp.dev/
 - https://ohmyz.sh/
 
-# Mac brews
+## Mac brews
 ```
 brew install gh
 ```
