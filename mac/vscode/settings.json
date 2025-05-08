@@ -1,0 +1,40 @@
+{
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "workbench.startupEditor": "none",
+    "workbench.editor.wrapTabs": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "python.defaultInterpreterPath": "/Users/nispatil/Documents/python/.venv",
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "makefile.configureOnOpen": true,
+    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+    "git.blame.editorDecoration.enabled": true,
+    "mcp": {
+        "inputs": [],
+        "servers": {
+            "filesystem": {
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@modelcontextprotocol/server-filesystem",
+                    "/Users/nispatil/"
+                ]
+            }
+        }
+    }
+}

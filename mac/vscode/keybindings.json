@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "cmd+'",
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "github.copilot.completions.enable"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "github.copilot.completions.disable"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "github.copilot.togglePlaintextCompletion"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.chat.open"
+    }
+]
