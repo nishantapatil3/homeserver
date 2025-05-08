@@ -1,13 +1,14 @@
 ## Pre-install steps
-ssh
-```
-sudo apt install openssh-server -y
-sudo systemctl start ssh
-```
 
 ### apt
 ```
 sudo apt update; sudo apt upgrade -y
+```
+
+ssh
+```
+sudo apt install openssh-server -y
+sudo systemctl start ssh
 ```
 
 apps
@@ -30,13 +31,15 @@ sudo chown -R root:docker /var/run/docker
 ```
 
 ### brew
-https://brew.sh
+Install brew - https://brew.sh
 ```
+brew install 
+brew install 
 brew install docker-compose
 brew install btop
 ```
 
-# for *.local address
+### for *.local address
 sudo apt install avahi-daemon
 
 # terminal
