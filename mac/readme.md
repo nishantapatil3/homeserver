@@ -31,6 +31,7 @@ brew install stats
 ### Terminal
 - p10k - https://github.com/romkatv/powerlevel10k
 - Reverse search cmd - https://github.com/junegunn/fzf
+- Tmux - https://zellij.dev/
 
 ### Mac tools
 - Chrome - https://www.google.com/chrome/
