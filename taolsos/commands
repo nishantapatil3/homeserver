@@ -1,0 +1,39 @@
+
+# wake on lan
+
+# device-03
+wakeonlan d4:5d:df:1d:fd:4d
+# device-04
+wakeonlan d4:5d:df:1d:fc:a7
+# device-05
+wakeonlan d4:5d:df:1d:fc:4b
+
+# Install steps
+
+talosctl -n 192.168.4.130 -e 192.168.4.130 get disks --insecure
+
+talosctl gen config contra https://device-03.local:6443 --install-disk /dev/nvme0n1
+
+talosctl apply-config -e 192.168.4.130 -n 192.168.4.130 --talosconfig=./talosconfig --file device-03.yaml --insecure
+talosctl apply-config -e 192.168.4.130 -n 192.168.4.131 --talosconfig=./talosconfig --file device-04.yaml --insecure
+talosctl apply-config -e 192.168.4.130 -n 192.168.4.132 --talosconfig=./talosconfig --file device-05.yaml --insecure
+
+talosctl bootstrap --nodes 192.168.4.130 --endpoints 192.168.4.130 --talosconfig=./talosconfig
+
+export KUBECONFIG=/Users/nispatil/Downloads/talos.yaml
+talosctl kubeconfig $KUBECONFIG -n 192.168.4.130 -e 192.168.4.130 --talosconfig=./talosconfig 
+
+# use cmds
+
+talosctl dashboard -n 192.168.4.130 -e 192.168.4.130 --talosconfig ./talosconfig
+
+talosctl reset -n 192.168.4.130 -e 192.168.4.130 --talosconfig ./talosconfig
+
+talosctl restart -n 192.168.4.130 -e 192.168.4.130 --talosconfig ./talosconfig
+
+talosctl shutdown -n 192.168.4.130 -e 192.168.4.130 --talosconfig ./talosconfig
+
+
+# reset
+
+talosctl reset --system-labels-to-wipe EPHEMERAL,STATE --reboot --graceful=false --wait=false -n 192.168.4.130 -e 192.168.4.130 --talosconfig=./talosconfig
