@@ -33,10 +33,13 @@ sudo chown -R root:docker /var/run/docker
 ### brew
 Install brew - https://brew.sh
 ```
-brew install 
-brew install 
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 brew install docker-compose
 brew install btop
+brew install kubectl
+brew install k9s
+brew install k3sup
 ```
 
 ### for *.local address
