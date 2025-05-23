@@ -1,0 +1,54 @@
+#cloud-config
+autoinstall:
+  version: 1
+  update: yes
+  keyboard: {layout: us, toggle: null, variant: ''}
+  timezone: "America/Los_Angeles"
+  locale: en_US.UTF-8
+  identity:
+    hostname: device-04
+    password: "" # Generate using `openssl passwd -6 -stdin <<< PASSWORD_HERE`
+    username: ubuntu
+  ssh:
+    allow-pw: true
+    install-server: true
+  packages: 
+    - software-properties-common
+    - ca-certificates
+    - curl
+    - wget
+    - git
+  user-data: # Cloud-init starts here after reboot
+    disable_root: false
+    apt:
+      primary:
+        - arches: [default]
+          uri: http://us.archive.ubuntu.com/ubuntu/
+      sources:
+        kubectl.list:
+          source: deb [arch=amd64] https://apt.kubernetes.io/ kubernetes-xenial main
+          keyid: 59FE0256827269DC81578F928B57C5C2836F4BEB
+        helm.list:
+          source: deb https://baltocdn.com/helm/stable/debian/ all main
+          keyid: 81BF832E2F19CD2AA0471959294AC4827C1A168A
+    package_update: true
+    package_upgrade: true
+    packages:
+      - avahi-daemon
+      - curl
+      - git
+      - vim
+      - wget
+      - htop
+      - build-essential
+      - python3-pip
+      - docker.io
+    snaps:
+      - name: kubectl
+        classic: true
+      - name: helm
+        classic: true
+      - name: microk8s
+        classic: true
+      - name: k9s
+        classic: false
