@@ -6,7 +6,7 @@ autoinstall:
   timezone: "America/Los_Angeles"
   locale: en_US.UTF-8
   identity:
-    hostname: device-04
+    hostname: rama
     password: "" # Generate using `openssl passwd -6 -stdin <<< PASSWORD_HERE`
     username: ubuntu
   ssh:
