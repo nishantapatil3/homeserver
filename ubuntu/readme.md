@@ -35,17 +35,21 @@ Install brew - https://brew.sh
 ```
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install docker-compose
+brew install htop
 brew install btop
+brew install docker-compose
 brew install kubectl
 brew install k9s
-brew install k3sup
+brew install helm
+brew install fzf
 ```
 
-### for *.local address
-sudo apt install avahi-daemon
+### snap
+```
+sudo snap install microk8s
+```
 
-# terminal
+### terminal
 ```
 https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 https://ohmyz.sh/
@@ -53,3 +57,7 @@ https://ohmyz.sh/
 sudo apt install fzf
 Update .zshrc with plugins=(fzf)
 ```
+
+# Extras
+### for *.local address
+sudo apt install avahi-daemon

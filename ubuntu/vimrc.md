@@ -1,3 +1,6 @@
+Create `~/.vimrc` and add below config
+
+```
 set expandtab ts=4 sw=4 ai
 set hlsearch
 set ci
@@ -7,3 +10,4 @@ set nu
 set paste
 set ruler
 set incsearch
+```
