@@ -1,5 +1,16 @@
 ## Pre-install steps
 
+### password less
+```
+You can configure sudo to never ask for your password.
+
+sudo visudo
+
+In the bottom of the file, add the following line:
+
+$USER ALL=(ALL) NOPASSWD: ALL
+```
+
 ### apt
 ```
 sudo apt update; sudo apt upgrade -y
@@ -46,7 +57,8 @@ brew install fzf
 
 ### snap
 ```
-sudo snap install microk8s
+sudo snap install microk8s --classic
+sudo snap install zellij --classic
 ```
 
 ### terminal
