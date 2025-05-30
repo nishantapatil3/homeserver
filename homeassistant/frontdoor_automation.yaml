@@ -24,8 +24,7 @@ actions:
       duration: 60
       lookback: 0
       filename: >-
-        /media/frontdoor/frontdoor_{{
-        now().astimezone().strftime('%Y-%m-%d-%H:%M:%S') }}.mp4
+        /media/frontdoor/frontdoor_{{ now().astimezone().strftime('%Y-%m-%dT%H-%M-%S') }}.mp4
     target:
       entity_id: camera.front_door_live
 mode: single
