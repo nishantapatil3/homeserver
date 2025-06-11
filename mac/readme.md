@@ -25,7 +25,8 @@ brew install kind
 brew install hey
 
 # Good to have
-brew install stats
+brew install --cask stats
+brew install --cask coconutbattery
 ```
 
 ### Terminal
@@ -42,6 +43,7 @@ brew install stats
 ### Bootable USB
 - Boot - https://etcher.balena.io/
 - Multiboot - https://www.ventoy.net/en/index.html
+- Windows 10 bootable USB on Mac - https://gist.github.com/acarril/8c15f600cf0397dd61161a470f50f669
 
 ### Utils
 - File Sync - https://freefilesync.org/
