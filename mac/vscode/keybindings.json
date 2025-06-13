@@ -19,5 +19,9 @@
     {
         "key": "cmd+l",
         "command": "workbench.action.chat.open"
+    },
+    {
+        "key": "cmd+i",
+        "command": "inlineChat.start",
     }
 ]

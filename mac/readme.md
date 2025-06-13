@@ -25,6 +25,9 @@ brew install kind
 brew install hey
 
 # Good to have
+brew install --cask warp
+brew install --cask superwhisper
+brew install --cask ollama
 brew install --cask stats
 brew install --cask coconutbattery
 ```
@@ -38,14 +41,18 @@ brew install --cask coconutbattery
 - Edge - https://www.microsoft.com/en-us/edge/download
 - Drive - https://workspace.google.com/products/drive/#download
 - VSCode - https://code.visualstudio.com/
-- Ollama - https://ollama.com/
 
+### Utils
+- Docker - 
+- File Sync - https://freefilesync.org/
+- Progressive Downloader - https://www.macpsd.net/
+- Convert screen recording to gif - https://github.com/sindresorhus/Gifski
+- Notion
+- 
+
+
+## Extras
 ### Bootable USB
 - Boot - https://etcher.balena.io/
 - Multiboot - https://www.ventoy.net/en/index.html
 - Windows 10 bootable USB on Mac - https://gist.github.com/acarril/8c15f600cf0397dd61161a470f50f669
-
-### Utils
-- File Sync - https://freefilesync.org/
-- Progressive Downloader - https://www.macpsd.net/
-- Convert screen recording to gif - https://github.com/sindresorhus/Gifski
