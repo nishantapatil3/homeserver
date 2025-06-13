@@ -1,55 +1,50 @@
-## New Mac installs
+# New Mac installs
+## First steps
 - Package manager - https://brew.sh/
-- Terminal - https://www.warp.dev/
+- Terminal - `brew install --cask warp`
 - ZSH - https://ohmyz.sh/
+- powerlevel10k - `brew install powerlevel10k`
 
 ## Mac brews
 ```
 # Work
-brew install romkatv/powerlevel10k/powerlevel10k\necho "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 brew install gh
-brew install go
-brew install golangci-lint
-brew install awscli
-brew install diffutils #replaces Apple diff with unix diff
-
-# General
 brew install wget
 brew install watch
+brew install go
+brew install diffutils #replaces Apple diff with unix diff
 
 # k8
 brew install kubectl
 brew install k9s
 brew install helm
 brew install kind
-brew install hey
-
-# Good to have
-brew install --cask warp
-brew install --cask superwhisper
-brew install --cask ollama
-brew install --cask stats
-brew install --cask coconutbattery
 ```
 
 ### Terminal
-- p10k - https://github.com/romkatv/powerlevel10k
 - Reverse search cmd - https://github.com/junegunn/fzf
+- zsh-autosuggestions
+- zsh-completions
 
-### Mac tools
+## Mac tools
+### app website
 - Chrome - https://www.google.com/chrome/
 - Edge - https://www.microsoft.com/en-us/edge/download
 - Drive - https://workspace.google.com/products/drive/#download
-- VSCode - https://code.visualstudio.com/
-
-### Utils
-- Docker - 
+- Docker - https://www.docker.com/products/docker-desktop/
+- Notion - https://www.notion.com/
 - File Sync - https://freefilesync.org/
 - Progressive Downloader - https://www.macpsd.net/
-- Convert screen recording to gif - https://github.com/sindresorhus/Gifski
-- Notion
-- 
 
+### brew
+- VSCode - `brew install --cask visual-studio-code`
+- Stats - `brew install --cask stats`
+- Coconutbattery - `brew install --cask coconutbattery`
+- Superwhisper - `brew install --cask superwhisper`
+- Ollama - `brew install --cask ollama`
+
+### Mac Appstore
+- Gifski
 
 ## Extras
 ### Bootable USB
