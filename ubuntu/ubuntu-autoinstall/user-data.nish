@@ -2,17 +2,20 @@
 autoinstall:
   version: 1
   update: yes
-  keyboard: {layout: us, toggle: null, variant: ''}
+  keyboard:
+    layout: us
+    toggle: null
+    variant: ''
   timezone: "America/Los_Angeles"
   locale: en_US.UTF-8
   identity:
-    hostname: rama
-    password: "" # Generate using `openssl passwd -6 -stdin <<< PASSWORD_HERE`
+    hostname: dev05
     username: ubuntu
+    password: "$6$b92TxbCya92ndrX7$8WcGTdSWWRMwMdeipBmTTDMeal7bvbh.kuqMIl1C6vcKmrSIh9VkxhKPJa.uirEZvrvYapHNPZvGPYnCK0tcl1" # n
   ssh:
     allow-pw: true
     install-server: true
-  packages: 
+  packages:
     - software-properties-common
     - ca-certificates
     - curl
@@ -20,6 +23,14 @@ autoinstall:
     - git
   user-data: # Cloud-init starts here after reboot
     disable_root: false
+    users:
+      - name: ubuntu
+        gecos: 'Ubuntu User'
+        groups: users, admin, docker, sudo
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        shell: /bin/bash
+        lock_passwd: false
+        passwd: "$6$b92TxbCya92ndrX7$8WcGTdSWWRMwMdeipBmTTDMeal7bvbh.kuqMIl1C6vcKmrSIh9VkxhKPJa.uirEZvrvYapHNPZvGPYnCK0tcl1" # n
     apt:
       primary:
         - arches: [default]
@@ -43,12 +54,3 @@ autoinstall:
       - build-essential
       - python3-pip
       - docker.io
-    snaps:
-      - name: kubectl
-        classic: true
-      - name: helm
-        classic: true
-      - name: microk8s
-        classic: true
-      - name: k9s
-        classic: false
