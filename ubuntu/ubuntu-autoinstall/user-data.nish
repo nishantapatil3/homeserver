@@ -27,14 +27,15 @@ autoinstall:
     package_update: true
     package_upgrade: true
     packages:
+      - build-essential
+      - python3-pip
+      - docker.io
       - avahi-daemon
       - curl
       - git
       - vim
       - wget
       - htop
-      - build-essential
-      - python3-pip
-      - docker.io
     runcmd:
       - echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/ubuntu
+      - bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
