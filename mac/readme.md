@@ -1,9 +1,11 @@
 # New Mac installs
 ## First steps
 - Package manager - https://brew.sh/
-- Terminal - `brew install --cask warp`
+- Terminal - https://www.warp.dev/
 - ZSH - https://ohmyz.sh/
 - powerlevel10k - `brew install powerlevel10k`
+
+## Tools
 
 ## Mac brews
 ```
@@ -28,22 +30,21 @@ brew install kind
 
 ## Mac tools
 ### app website
-- Chrome - https://www.google.com/chrome/
-- Edge - https://www.microsoft.com/en-us/edge/download
-- Drive - https://workspace.google.com/products/drive/#download
-- Docker - https://www.docker.com/products/docker-desktop/
-- Notion - https://www.notion.com/
-- File Sync - https://freefilesync.org/
-- Progressive Downloader - https://www.macpsd.net/
+- Chrome
+- Edge
+- VSCode
+- Docker
 
-### brew
-- VSCode - `brew install --cask visual-studio-code`
-- Stats - `brew install --cask stats`
-- Coconutbattery - `brew install --cask coconutbattery`
-- Superwhisper - `brew install --cask superwhisper`
-- Ollama - `brew install --cask ollama`
+- Notion
+- Superwhisper
+- Ollama
+- Coconutbattery
+- Drive
 
-### Mac Appstore
+### Optional
+- FreeFileSync
+- Progressive Downloader
+- Stats - Mac stats
 - Gifski
 
 ## Extras
