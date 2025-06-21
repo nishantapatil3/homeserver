@@ -5,7 +5,7 @@
 - ZSH - https://ohmyz.sh/
 - powerlevel10k - `brew install powerlevel10k`
 
-## Tools
+# Tools
 
 ## Mac brews
 ```
@@ -34,7 +34,6 @@ brew install kind
 - Edge
 - VSCode
 - Docker
-
 - Notion
 - Superwhisper
 - Ollama
