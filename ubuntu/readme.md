@@ -8,6 +8,7 @@ sudo visudo
 
 In the bottom of the file, add the following line:
 
+# sudo to never ask for password
 $USER ALL=(ALL) NOPASSWD: ALL
 ```
 
@@ -18,9 +19,10 @@ sudo apt update; sudo apt upgrade -y
 
 apps
 ```
-sudo apt install openssh-server -y
+sudo apt install ssh -y
 sudo apt install git -y
 sudo apt install vim -y
+sudo apt install curl -y
 ```
 
 docker
@@ -31,8 +33,8 @@ sudo sh get-docker.sh
 
 # allow non-sudo access
 sudo usermod -aG docker $USER
-sudo chown root:docker /var/run/docker.sock
-sudo chown -R root:docker /var/run/docker
+#sudo chown root:docker /var/run/docker.sock
+$sudo chown -R root:docker /var/run/docker
 ```
 
 ### snap
@@ -60,3 +62,10 @@ Update .zshrc with plugins=(fzf)
 # Extras
 ### for *.local address
 sudo apt install avahi-daemon
+
+### nvidia drivers for docker
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/sample-workload.html
+```
+sudo apt install nvtop
+```
