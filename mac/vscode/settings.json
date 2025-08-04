@@ -37,27 +37,5 @@
         "*.db3": "${capture}.${extname}-*",
         "*.sdb": "${capture}.${extname}-*",
         "*.s3db": "${capture}.${extname}-*"
-    },
-    "mcp": {
-        "inputs": [],
-        "servers": {
-            "filesystem": {
-                "command": "npx",
-                "args": [
-                    "-y",
-                    "@modelcontextprotocol/server-filesystem",
-                    "/Users/nispatil/"
-                ]
-            },
-            "aqua": {
-                "command": "uv",
-                "args": [
-                    "--directory",
-                    "/Users/nispatil/src/aqua-collector/mcp_server",
-                    "run",
-                    "mcp_server.py"
-                ]
-            }
-        }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "Home Assistant": {
+      "command": "mcp-proxy",
+      "env": {
+        "SSE_URL": "http://homeassistant.local:8123/mcp_server/sse",
+        "API_ACCESS_TOKEN": "<your_access_token_here>"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+	"inputs": [
+      {
+        "type": "promptString",
+        "id": "pg_url",
+        "description": "PostgreSQL URL (e.g. postgresql://user:pass@localhost:5432/mydb)"
+      }
+    ],
+	"servers": {
+		"filesystem": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-filesystem",
+				"/Users/nispatil/"
+			],
+			"type": "stdio"
+		},
+		"gordon": {
+			"command": "docker",
+			"args": [
+				"ai",
+				"mcpserver"
+			],
+			"type": "stdio"
+		},
+		"postgres": {
+        "command": "npx",
+        "args": [
+			"-y",
+			"@modelcontextprotocol/server-postgres",
+			"${input:pg_url}"
+        	]
+      	}
+	}
+}
